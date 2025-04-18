@@ -7,12 +7,12 @@
     <style>
         /* Global Styles */
         :root {
-            --primary-color: #000; /* Black */
-            --secondary-color: #555; /* Dark Gray */
-            --accent-color: #777; /* Gray */
-            --text-color: #000; /* Black */
-            --light-bg: #fff; /* White */
-            --border-color: #ccc; /* Light Gray */
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #1abc9c;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #e0e0e0;
         }
         
         * {
@@ -34,15 +34,27 @@
             padding: 0 20px;
         }
         
-        /* Header */
+        /* Header with Rainbow Effect */
         header {
-            background: var(--primary-color);
-            color: var(--light-bg);
-            padding: 20px 0;
-            text-align: center;
+            background: linear-gradient(
+                to right, 
+                #ff0000, /* Red */
+                #ff7f00, /* Orange */
+                #ffff00, /* Yellow */
+                #00ff00, /* Green */
+                #0000ff, /* Blue */
+                #4b0082, /* Indigo */
+                #9400d3  /* Violet */
+            );
+            color: black;
+            padding: 40px 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Text shadow for better readability */
         }
         
         .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
         
@@ -78,30 +90,173 @@
         
         section {
             margin-bottom: 40px;
-            background-color: var(--light-bg);
+            background-color: black;
             border-radius: 8px;
             padding: 30px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         
-        /* Section headers */
+        /* Section headers with rainbow effect */
         h2 {
-            color: var(--primary-color);
+            color: black;
             font-size: 1.8rem;
             margin-bottom: 20px;
             padding: 8px 15px;
             border-radius: 5px;
-            background-color: var(--secondary-color);
+            background: linear-gradient(
+                to right, 
+                #ff0000, /* Red */
+                #ff7f00, /* Orange */
+                #ffff00, /* Yellow */
+                #00ff00, /* Green */
+                #0000ff, /* Blue */
+                #4b0082, /* Indigo */
+                #9400d3  /* Violet */
+            );
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
         }
         
+        /* Summary */
+        .summary-content {
+            font-size: 1.1rem;
+        }
+        
+        .summary-content ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        /* Experience & Education */
+        .timeline-item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-period {
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        /* Publications */
+        .publication-section h3 {
+            color: black;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            font-size: 1.3rem;
+            background: linear-gradient(
+                to right, 
+                #ff7f00, /* Orange */
+                #ffff00, /* Yellow */
+                #00ff00, /* Green */
+                #0000ff  /* Blue */
+            );
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .publication {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .publication:last-child {
+            border-bottom: none;
+        }
+        
+        /* Skills */
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        
+        .skill-category-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+            background: linear-gradient(
+                to right,
+                #0000ff, /* Blue */
+                #4b0082, /* Indigo */
+                #9400d3  /* Violet */
+            );
+            color: black;
+            padding: 3px 8px;
+            border-radius: 3px;
+            display: inline-block;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+        }
+        
+        /* References */
+        .references-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .reference {
+            background-color: var(--light-bg);
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid;
+            border-image: linear-gradient(
+                to bottom,
+                #ff0000, /* Red */
+                #ff7f00, /* Orange */
+                #ffff00  /* Yellow */
+            ) 1;
+        }
+        
+        /* Footer */
         footer {
-            background: var(--primary-color);
-            color: var(--light-bg);
+            background: linear-gradient(
+                to right, 
+                #ff0000, /* Red */
+                #ff7f00, /* Orange */
+                #ffff00, /* Yellow */
+                #00ff00, /* Green */
+                #0000ff, /* Blue */
+                #4b0082, /* Indigo */
+                #9400d3  /* Violet */
+            );
+            color: black;
             text-align: center;
             padding: 20px 0;
-            margin-top: 20px;
+            margin-top: 40px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
         }
         
+        /* Rainbow animation for header and footer */
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        header, footer, h2, .publication-section h3 {
+            linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%,             rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%) 
+   0 0/100% 200%;
+            animation: a 2s linear infinite;
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
             .profile-name {
                 font-size: 2rem;
@@ -114,6 +269,10 @@
             section {
                 padding: 20px;
             }
+            
+            .skills-list, .references-list {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -124,22 +283,23 @@
                 <h1 class="profile-name">Ahmet Ilker Topuz</h1>
                 <div class="contact-info">
                     <div class="contact-item">
-                        <a href="mailto:aitopuz@protonmail.com" style="color: var(--light-bg); text-decoration: none;">aitopuz@protonmail.com</a>
+                        <a href="mailto:aitopuz@protonmail.com" style="color: black; text-decoration: none;">aitopuz@protonmail.com</a>
                     </div>
                     <div class="contact-item">
-                        <a href="mailto:aitopuz@zohomail.eu" style="color: var(--light-bg); text-decoration: none;">aitopuz@zohomail.eu</a>
+                        <a href="mailto:aitopuz@zohomail.eu" style="color: black; text-decoration: none;">aitopuz@zohomail.eu</a>
                     </div>
                     <div class="contact-item">
-                        <a href="https://github.com/illcore" target="_blank" style="color: var(--light-bg); text-decoration: none;">GitHub</a>
+                        <a href="https://github.com/illcore" target="_blank" style="color: black; text-decoration: none;">GitHub</a>
                     </div>
                     <div class="contact-item">
-                        <a href="https://orcid.org/0000-0002-1397-8839" target="_blank" style="color: var(--light-bg); text-decoration: none;">ORCID: 0000-0002-1397-8839</a>
+                        <a href="https://orcid.org/0000-0002-1397-8839" target="_blank" style="color: black; text-decoration: none;">ORCID: 0000-0002-1397-8839</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
- <main class="container">
+
+    <main class="container">
         <section id="summary">
             <h2>Summary</h2>
             <div class="summary-content">
@@ -307,8 +467,6 @@
                     <div>Linux, LaTeX, C, Python, Matplotlib, TikZ, QtiPlot, GEANT4, MCNP</div>
                 </div>
             </div>
-    <footer>
-
     <footer>
         <div class="container">
             <p>&copy; 2024 - 2025 Ahmet Ilker Topuz</p>
