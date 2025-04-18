@@ -10,7 +10,7 @@
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
             --accent-color: #1abc9c;
-            --text-color: #333;
+            --text-color: #2c3e50;
             --light-bg: #f8f9fa;
             --border-color: #e0e0e0;
         }
@@ -30,6 +30,7 @@
         
         .container {
             max-width: 1200px;
+            max-height: 100px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -89,6 +90,7 @@
         }
         
         section {
+            margin-top: 40px;
             margin-bottom: 40px;
             background-color: black;
             border-radius: 8px;
@@ -204,25 +206,6 @@
             text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
         }
         
-        /* References */
-        .references-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .reference {
-            background-color: var(--light-bg);
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 4px solid;
-            border-image: linear-gradient(
-                to bottom,
-                #ff0000, /* Red */
-                #ff7f00, /* Orange */
-                #ffff00  /* Yellow */
-            ) 1;
-        }
         
         /* Footer */
         footer {
@@ -242,38 +225,7 @@
             margin-top: 40px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
         }
-        
-        /* Rainbow animation for header and footer */
-        @keyframes rainbow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        header, footer, h2, .publication-section h3 {
-            linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%,             rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%) 
-   0 0/100% 200%;
-            animation: a 2s linear infinite;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .profile-name {
-                font-size: 2rem;
-            }
-            
-            .profile-title {
-                font-size: 1.2rem;
-            }
-            
-            section {
-                padding: 20px;
-            }
-            
-            .skills-list, .references-list {
-                grid-template-columns: 1fr;
-            }
-        }
+       
     </style>
 </head>
 <body>
@@ -467,9 +419,12 @@
                     <div>Linux, LaTeX, C, Python, Matplotlib, TikZ, QtiPlot, GEANT4, MCNP</div>
                 </div>
             </div>
+        </section>   
     <footer>
         <div class="container">
+        <div class="footer-content">
             <p>&copy; 2024 - 2025 Ahmet Ilker Topuz</p>
+        </div>
         </div>
     </footer>
 </body>
