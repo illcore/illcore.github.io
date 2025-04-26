@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmet Ilker Topuz - Website</title>
+    <title>Ahmet Ilker Topuz - CV</title>
     <style>
         /* Global Styles */
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
             --accent-color: #1abc9c;
-            --text-color: #e0e0e0;
+            --text-color: #2c3e50;
             --light-bg: #f8f9fa;
             --border-color: #e0e0e0;
         }
@@ -37,6 +37,16 @@
         
         /* Header with Rainbow Effect */
         header {
+            background: linear-gradient(
+                to right, 
+                #ff0000, /* Red */
+                #ff7f00, /* Orange */
+                #ffff00, /* Yellow */
+                #00ff00, /* Green */
+                #0000ff, /* Blue */
+                #4b0082, /* Indigo */
+                #9400d3  /* Violet */
+            );
             color: black;
             padding: 40px 0;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Text shadow for better readability */
@@ -73,17 +83,10 @@
             align-items: center;
             gap: 8px;
         }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
         
         /* Main Content */
         main {
-            padding: 20px 0;
+            padding: 40px 0;
         }
         
         section {
@@ -171,6 +174,10 @@
             border-bottom: 1px solid var(--border-color);
         }
         
+        .publication:last-child {
+            border-bottom: none;
+        }
+        
         /* Skills */
         .skills-list {
             display: grid;
@@ -216,8 +223,7 @@
             text-align: center;
             padding: 20px 0;
             margin-top: 40px;
-            position: fixed;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
         }
        
     </style>
@@ -249,8 +255,8 @@
             <div class="summary-content">
                 <p>Computational aspects of radiation-matter interaction including:</p>
                 <ul>
-                    <li>Radiation physics: Particle transport, source definition/setup, particle detectors, muon tomography, space applications, and shielding/dosimetry;</li>
-                    <li>Computational methods: Monte Carlo simulations, probabilistic approaches, and statistical/deterministic numerical methods.</li>
+                    <li>Radiation physics: Particle transport, source definition/setup, particle detectors, muon tomography, space applications, and shielding/dosimetry</li>
+                    <li>Computational methods: Monte Carlo simulations, probabilistic approaches, and statistical/deterministic numerical methods</li>
                 </ul>
             </div>
         </section>
@@ -411,7 +417,13 @@
                     <div>Linux, LaTeX, C, Python, Matplotlib, TikZ, QtiPlot, GEANT4, MCNP</div>
                 </div>
             </div>
-        </section>    
-    </main>
+        </section>   
+    <footer>
+        <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2024 - 2025 Ahmet Ilker Topuz</p>
+        </div>
+        </div>
+    </footer>
 </body>
 </html>
